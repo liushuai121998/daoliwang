@@ -5,7 +5,7 @@
   <div class="home">
     <div class="title">
       <image class="title__icon" src="/Common/title-icon.png"></image>
-      <image class="title__sub-icon" src="/Common/title-sub-icon.png"></image>
+      <!-- <image class="title__sub-icon" src="/Common/title-sub-icon.png"></image> -->
     </div>
     <div class="main">
       <div class="content">
@@ -15,7 +15,8 @@
               <text class="time">{{dateNow}}</text>
               <div class="content-text">
                 <div class="content-text__content"> 
-                  <text>{{item.content}}</text>
+                  <text>{{item.front}}</text>
+                  <text>{{item.behind}}</text>
                 </div>
               </div>
             </list-item>

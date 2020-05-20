@@ -20,7 +20,7 @@ export default Custom_page({
   },
   async getData() {
     const $appDef = this.$app.$def
-    const {data} = await $appDef.$http.get(`/zaoan/index?key=${$appDef.key}`)
+    const {data} = await $appDef.$http.get(`/proverb/index?key=${$appDef.key}`)
     if(data.code === 200) {
       this.newsList = data.newslist
     }
@@ -29,7 +29,7 @@ export default Custom_page({
   },
   longPress(item, e) {
     clipboard.set({
-      text: `${item.content}`,
+      text: `${item.front}\n${item.behind}`,
       success () {
         prompt.showToast({
           message: '复制成功'
